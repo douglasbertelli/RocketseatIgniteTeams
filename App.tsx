@@ -12,7 +12,7 @@ import {ThemeProvider} from 'styled-components/native'
 import theme from '@theme/index'
 
 /* View */
-//import Groups from '@screens/Groups';
+import Groups from '@screens/Groups';
 import Loading from '@components/Loading';
 import NewGroup from "@screens/NewGroup";
 
