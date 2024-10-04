@@ -22,10 +22,19 @@ export const HeaderList = styled.View`
     margin: 4px 0;
 `
 
+export const ContainerNumberOfPlayers = styled.View`
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    background-color: ${({theme}) => theme.COLORS.GRAY_500};
+`
 export const NumberOfPlayers = styled.Text`
     ${({theme}) => css`
         color: ${theme.COLORS.WHITE};
         font-family: ${theme.FONT_FAMILY.BOLD};
-        font-size: ${theme.FONT_SIZE.SM}px;
+        font-size: ${theme.FONT_SIZE.MD}px;
     `}
 `

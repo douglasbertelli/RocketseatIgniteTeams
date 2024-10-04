@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FlatList} from 'react-native';
-import {Container, Form, HeaderList, NumberOfPlayers} from "./styles";
+import {Container, ContainerNumberOfPlayers, Form, HeaderList, NumberOfPlayers} from "./styles";
 
 import Header from '@components/Header'
 import Highlight from '@components/Highlight'
@@ -29,9 +29,10 @@ export default function Players() {
 
 			<HeaderList>
 				<FlatList
-					data={['Time A', 'Time B']}
+					data={['Time A', 'Time B', 'Time C', 'Time D', 'Time E']}
 					keyExtractor={item => item}
 					horizontal
+					showsHorizontalScrollIndicator={false}
 					renderItem={({item}) => (
 						<Filter
 							title={item}
@@ -41,9 +42,12 @@ export default function Players() {
 					)}
 				/>
 
-				<NumberOfPlayers>
-					{players.length}
-				</NumberOfPlayers>
+				<ContainerNumberOfPlayers>
+					<NumberOfPlayers>
+						{players.length}
+					</NumberOfPlayers>
+				</ContainerNumberOfPlayers>
+
 			</HeaderList>
 
 			<FlatList
@@ -55,14 +59,13 @@ export default function Players() {
 				)}
 				ListEmptyComponent={() => <ListEmpty message={"Não há pessoas nesse time"}/>}
 				showsVerticalScrollIndicator={false}
-				contentContainerStyle={[
-					{paddingBottom: 20},
-					players.length === 0 && {flex: 1},
-				]}
+				contentContainerStyle={
+					players.length === 0 && {flex: 1}
+				}
 			/>
 
 			<Button
-				title={'Remover turma'}
+				title={'Remover Turma'}
 				type={'SECONDARY'}
 			/>
 

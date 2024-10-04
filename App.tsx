@@ -12,17 +12,15 @@ import {ThemeProvider} from 'styled-components/native'
 import theme from '@theme/index'
 
 /* View */
-import Groups from '@screens/Groups';
-import NewGroup from "@screens/NewGroup";
 import Loading from '@components/Loading';
-import Players from "@screens/Players";
+import {Routes} from "@routes/index";
 
 export default function App() {
 	const [fontsLoaded] = useFonts({Roboto_400Regular, Roboto_700Bold})
 
 	return (
 		<ThemeProvider theme={theme}>
-			{fontsLoaded ? <Players/> : <Loading/>}
+			{fontsLoaded ? <Routes/> : <Loading/>}
 			<StatusBar style="light"/>
 		</ThemeProvider>
 	);
