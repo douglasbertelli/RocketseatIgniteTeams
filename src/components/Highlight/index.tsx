@@ -7,11 +7,11 @@ type Props = {
 	subtitle: string
 }
 
-export default function Highlight(props: Props) {
+export default function Highlight({title, subtitle}: Props) {
 	return (
 		<Container>
-			<Title>{props.title}</Title>
-			<Subtitle>{props.subtitle}</Subtitle>
+			<Title>{title}</Title>
+			<Subtitle>{subtitle}</Subtitle>
 		</Container>
 	);
 }
