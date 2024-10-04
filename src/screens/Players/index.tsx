@@ -5,6 +5,7 @@ import Header from '@components/Header'
 import Highlight from '@components/Highlight'
 import ButtonIcon from "@components/ButtonIcon";
 import InputText from "@components/Input";
+import Filter from "@components/Filter";
 
 export default function Players() {
 	return (
@@ -18,6 +19,9 @@ export default function Players() {
 				/>
 				<ButtonIcon icon={'add'}/>
 			</Form>
+
+			<Filter title={"Time A"} isActive/>
+			<Filter title={"Time B"}/>
 		</Container>
 	);
 }
