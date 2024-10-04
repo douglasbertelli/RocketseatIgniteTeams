@@ -10,6 +10,7 @@ export const Container = styled.View`
 export const Content = styled.View`
     flex: 1;
     justify-content: center;
+    gap: 12px;
 `
 
 export const Icon = styled(UsersThree).attrs(({theme}) => ({
