@@ -11,7 +11,7 @@ export default function NewGroup() {
 			<Header showBackButton/>
 			<Content>
 				<Icon/>
-				<Highlight title={'Nova turma'} subtitle={'Crie e a turma para adicionar as pessoas'}/>
+				<Highlight title={'Nova turma'} subtitle={'Crie a turma para adicionar as pessoas'}/>
 				<InputText placeholder={"Nome da turma"}/>
 				<Button title={"Criar"}/>
 			</Content>
