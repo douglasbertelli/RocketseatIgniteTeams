@@ -1,12 +1,10 @@
 import styled from 'styled-components/native'
+import {SafeAreaView} from 'react-native-safe-area-context'
 
-export const Container = styled.View`
+export const Container = styled(SafeAreaView)`
     flex: 1;
-    background-color: ${({theme}) => theme.COLORS.GRAY_700};
+    background-color: ${({theme}) => theme.COLORS.GRAY_600};
     align-items: center;
-    padding-top: 60px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
+    padding: 0 16px 16px;
     gap: 12px;
 `

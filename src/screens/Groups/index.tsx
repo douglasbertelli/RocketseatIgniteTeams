@@ -29,6 +29,7 @@ export default function Groups() {
 				style={styles.List}
 				data={groups}
 				keyExtractor={item => item}
+				showsVerticalScrollIndicator={false}
 				contentContainerStyle={groups.length === 0 && {flex: 1}}
 				renderItem={({item}) => (
 					<GroupCard
