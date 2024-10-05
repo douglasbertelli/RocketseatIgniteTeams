@@ -11,14 +11,26 @@ import Filter from "@components/Filter";
 import PlayerCard from "@components/PlayerCard";
 import ListEmpty from "@components/ListEmpty";
 
+import {useRoute} from "@react-navigation/native";
+
+/* Tipagem do dado da rota. */
+type RouteParams = {
+	group: string
+}
+
 export default function Players() {
 	const [team, setTeam] = useState('Time A')
 	const [players, setPlayers] = useState(['Douglas', 'Vera', 'Ingrid', 'America', 'Alexandre', 'Alex', 'Bruno', 'Roberta', 'Lucas', 'Tânia'])
 
+	/* Recuperando os dados passados pela rota. */
+	const route = useRoute()
+	/* Desestruturando os dados de route. */
+	const {group} = route.params as RouteParams
+
 	return (
 		<Container>
 			<Header showBackButton/>
-			<Highlight title={"Nome da turma"} subtitle={"Adicione a galera e separe os times"}/>
+			<Highlight title={group} subtitle={"Adicione a galera e separe os times"}/>
 			<Form>
 				<InputText
 					placeholder={"Nome da pessoa"}
