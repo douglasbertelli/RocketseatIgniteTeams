@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context'
 export const Container = styled(SafeAreaView)`
     flex: 1;
     background-color: ${({theme}) => theme.COLORS.GRAY_600};
-    padding: 0 16px 16px;
+    padding: 16px;
     gap: 16px;
 `
 
